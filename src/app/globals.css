@@ -9,6 +9,11 @@
 
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
+
+  --color-neon-green: #CCFF00;
+  --color-neon-blue: #00E5FF;
+
+  --variant-dark: (&:where(.dark, .dark *));
 }
 
 :root {

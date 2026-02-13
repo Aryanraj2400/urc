@@ -4,7 +4,7 @@ import { ShieldCheck, Leaf, Smile } from "lucide-react";
 
 export function TrustSection() {
     return (
-        <section className="py-12 bg-secondary/5 border-y border-secondary/10">
+        <section className="py-12 bg-secondary/5">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="flex items-center gap-4 p-4 rounded-xl bg-background shadow-sm border border-border">

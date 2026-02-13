@@ -20,12 +20,12 @@ export function ServiceCard({ service }: ServiceCardProps) {
         <motion.div
             layout
             className={cn(
-                "bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow h-full flex flex-col",
+                "bg-card rounded-2xl p-6 shadow-sm border border-background dark:border-black hover:shadow-md transition-shadow h-full flex flex-col",
                 isInCart && "ring-2 ring-secondary border-secondary"
             )}
         >
             {service.image && (
-                <div className="relative w-full h-48 mb-4 rounded-xl overflow-hidden bg-muted">
+                <div className="relative w-full h-48 mb-4 rounded-xl overflow-hidden bg-muted dark:bg-black">
                     <img src={service.image} alt={service.name} className="object-cover w-full h-full hover:scale-105 transition-transform duration-500" />
                 </div>
             )}
@@ -88,7 +88,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
                         exit={{ height: 0, opacity: 0 }}
                         className="overflow-hidden"
                     >
-                        <ul className="mt-4 space-y-2 text-sm text-muted-foreground pt-2 border-t border-border/50">
+                        <ul className="mt-4 space-y-2 text-sm text-muted-foreground pt-2 border-t border-background dark:border-black">
                             {service.inclusions.map((item, index) => (
                                 <li key={index} className="flex items-start gap-2">
                                     <Check className="w-4 h-4 text-secondary mt-0.5 shrink-0" />

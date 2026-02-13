@@ -17,7 +17,7 @@ export function Hero() {
                     transition={{ duration: 0.6 }}
                 >
                     <div className="flex items-center gap-2 mb-6">
-                        <span className="px-3 py-1 rounded-full bg-[#CCFF00]/10 text-[#CCFF00] text-xs font-bold tracking-wider border border-[#CCFF00]/30 shadow-[0_0_15px_rgba(204,255,0,0.1)]">
+                        <span className="px-3 py-1 rounded-full bg-neon-green/10 dark:bg-neon-blue/10 text-neon-green dark:text-neon-blue text-xs font-bold tracking-wider border border-neon-green/30 dark:border-neon-blue/30 shadow-[0_0_15px_rgba(204,255,0,0.1)] dark:shadow-[0_0_15px_rgba(0,229,255,0.1)] transition-colors duration-300">
                             #1 RATED CLEANING SERVICE
                         </span>
                     </div>
@@ -30,7 +30,7 @@ export function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                        <Button size="lg" className="w-full sm:w-auto text-base h-12 shadow-xl shadow-[#CCFF00]/20 bg-[#CCFF00] text-black hover:bg-[#B8E600] border-none font-bold">
+                        <Button size="lg" className="w-full sm:w-auto text-base h-12 shadow-xl shadow-neon-green/20 dark:shadow-neon-blue/20 bg-neon-green dark:bg-neon-blue text-black dark:text-black hover:bg-neon-green/90 dark:hover:bg-neon-blue/90 border-none font-bold transition-all duration-300">
                             Book Now <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
                         <Link href="/services" className="w-full sm:w-auto">
@@ -58,9 +58,9 @@ export function Hero() {
             </div>
 
             {/* Right Content - Asymmetric Collage */}
-            <div className="w-full md:w-[40%] h-[50vh] md:h-[calc(100vh-6rem)] relative bg-white dark:bg-[#0A0A0A] md:block hidden mt-24 border-l border-border/50">
+            <div className="w-full md:w-[40%] h-[50vh] md:h-[calc(100vh-6rem)] relative bg-background dark:bg-black md:block hidden mt-24 border-l border-neon-green/10 dark:border-neon-blue/10 transition-colors duration-300">
                 {/* Background decorative elements */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full bg-secondary/5 blur-[100px]" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full bg-neon-green/10 dark:bg-neon-blue/10 blur-[100px] transition-colors duration-300" />
 
                 <div className="absolute inset-0 p-8 grid grid-cols-2 grid-rows-2 gap-4 h-full content-center">
                     {/* Image 1 */}
@@ -68,7 +68,7 @@ export function Hero() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="relative rounded-2xl overflow-hidden shadow-xl"
+                        className="relative rounded-2xl overflow-hidden shadow-xl bg-neon-green/5 dark:bg-neon-blue/5 border border-neon-green/10 dark:border-neon-blue/10 transition-colors duration-300"
                     >
                         <Image
                             src="/images/hero-new-1.jpg"
@@ -83,7 +83,7 @@ export function Hero() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
-                        className="relative rounded-2xl overflow-hidden shadow-xl"
+                        className="relative rounded-2xl overflow-hidden shadow-xl bg-neon-green/5 dark:bg-neon-blue/5 border border-neon-green/10 dark:border-neon-blue/10 transition-colors duration-300"
                     >
                         <Image
                             src="/images/hero-new-2.jpg"
@@ -98,7 +98,7 @@ export function Hero() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        className="relative rounded-2xl overflow-hidden shadow-xl"
+                        className="relative rounded-2xl overflow-hidden shadow-xl bg-neon-green/5 dark:bg-neon-blue/5 border border-neon-green/10 dark:border-neon-blue/10 transition-colors duration-300"
                     >
                         <Image
                             src="/images/hero-new-3.jpg"
@@ -113,7 +113,7 @@ export function Hero() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.5 }}
-                        className="relative rounded-2xl overflow-hidden shadow-xl"
+                        className="relative rounded-2xl overflow-hidden shadow-xl bg-neon-green/5 dark:bg-neon-blue/5 border border-neon-green/10 dark:border-neon-blue/10 transition-colors duration-300"
                     >
                         <Image
                             src="/images/hero-new-4.jpg"
@@ -128,10 +128,10 @@ export function Hero() {
             {/* Mobile Collage (Simpler version) */}
             <div className="w-full h-auto px-6 pb-12 md:hidden">
                 <div className="grid grid-cols-2 gap-4">
-                    <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg">
+                    <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg bg-neon-green/5 dark:bg-neon-blue/5 border border-neon-green/10 dark:border-neon-blue/10 transition-colors duration-300">
                         <Image src="/images/hero-new-1.jpg" alt="Team" fill className="object-cover object-top" />
                     </div>
-                    <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg mt-8">
+                    <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg mt-8 bg-neon-green/5 dark:bg-neon-blue/5 border border-neon-green/10 dark:border-neon-blue/10 transition-colors duration-300">
                         <Image src="/images/hero-new-2.jpg" alt="Cleaning" fill className="object-cover object-top" />
                     </div>
                 </div>

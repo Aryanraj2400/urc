@@ -102,8 +102,8 @@ export default function AdminServices() {
                                             className="border-2 border-dashed border-muted-foreground/20 rounded-xl p-4 hover:border-primary/50 transition-colors cursor-pointer bg-background/50 flex flex-col items-center justify-center gap-2 min-h-[120px]"
                                         >
                                             {formData.image ? (
-                                                <div className="relative w-full h-32">
-                                                    <img src={formData.image} alt="Preview" className="w-full h-full object-contain rounded-lg" />
+                                                <div className="relative w-full h-32 bg-muted/20 dark:bg-black rounded-lg overflow-hidden">
+                                                    <img src={formData.image} alt="Preview" className="w-full h-full object-contain" />
                                                     <div className="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
                                                         <p className="text-white text-xs font-bold">Change Image</p>
                                                     </div>
@@ -172,8 +172,8 @@ export default function AdminServices() {
             <Card className="border-none shadow-md bg-card/40 backdrop-blur-sm overflow-hidden">
                 <CardContent className="p-0">
                     <Table>
-                        <TableHeader className="bg-muted/50">
-                            <TableRow>
+                        <TableHeader className="bg-muted/50 border-b border-background dark:border-black">
+                            <TableRow className="border-b border-background dark:border-black">
                                 <TableHead className="w-[100px]">Image</TableHead>
                                 <TableHead className="font-semibold px-6 py-4">Name</TableHead>
                                 <TableHead className="font-semibold">Price</TableHead>
@@ -198,14 +198,14 @@ export default function AdminServices() {
                                 </TableRow>
                             ) : (
                                 services.map((service) => (
-                                    <TableRow key={service.id} className="group transition-colors hover:bg-muted/30">
+                                    <TableRow key={service.id} className="group transition-colors hover:bg-muted/30 border-b border-background dark:border-black">
                                         <TableCell>
                                             {service.image ? (
-                                                <div className="relative h-12 w-20 rounded-md overflow-hidden bg-muted">
+                                                <div className="relative h-12 w-20 rounded-md overflow-hidden bg-muted dark:bg-black">
                                                     <img src={service.image} alt={service.name} className="object-cover h-full w-full" />
                                                 </div>
                                             ) : (
-                                                <div className="h-12 w-20 rounded-md bg-muted flex items-center justify-center">
+                                                <div className="h-12 w-20 rounded-md bg-muted dark:bg-black flex items-center justify-center">
                                                     <ImageIcon className="h-4 w-4 text-muted-foreground" />
                                                 </div>
                                             )}

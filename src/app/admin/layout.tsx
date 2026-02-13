@@ -18,7 +18,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     return (
         <div className="flex min-h-screen bg-background">
             {/* Sidebar */}
-            <aside className="w-64 border-r bg-card/50 backdrop-blur-sm hidden md:flex flex-col">
+            <aside className="w-64 border-r border-background dark:border-black bg-card/50 backdrop-blur-sm hidden md:flex flex-col">
                 <div className="p-6">
                     <Link href="/" className="flex items-center gap-2 mb-8">
                         <Home className="w-5 h-5" />
@@ -53,8 +53,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                     </nav>
                 </div>
 
-                <div className="mt-auto p-6 border-t">
-                    <div className="bg-card rounded-xl p-4 border shadow-sm">
+                <div className="mt-auto p-6 border-t border-background dark:border-black">
+                    <div className="bg-card rounded-xl p-4 border border-background dark:border-black shadow-sm">
                         <p className="text-xs text-muted-foreground mb-1">Status</p>
                         <div className="flex items-center gap-2">
                             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
@@ -66,7 +66,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
             {/* Main Content */}
             <main className="flex-1 flex flex-col min-w-0">
-                <header className="h-16 border-b bg-card/50 backdrop-blur-sm flex items-center justify-between px-8 sticky top-0 z-10">
+                <header className="h-16 border-b border-background dark:border-black bg-card/50 backdrop-blur-sm flex items-center justify-between px-8 sticky top-0 z-10">
                     <h2 className="font-semibold text-lg">
                         {sidebarItems.find(item => item.href === pathname)?.name || "Admin"}
                     </h2>

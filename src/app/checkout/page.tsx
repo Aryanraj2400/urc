@@ -149,7 +149,7 @@ export default function CheckoutPage() {
                                     <Banknote className="w-6 h-6 text-muted-foreground" />
                                 </div>
 
-                                <div className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/50 p-3 rounded-lg mt-4">
+                                <div className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/50 p-3 rounded-lg mt-4 border border-background dark:border-black">
                                     <ShieldCheck className="w-4 h-4 text-green-500" />
                                     Payments are secure and encrypted.
                                 </div>
@@ -177,7 +177,7 @@ export default function CheckoutPage() {
                                         ))}
                                     </div>
 
-                                    <div className="w-full h-px bg-border my-2" />
+                                    <div className="w-full h-px bg-background dark:bg-black my-2" />
 
                                     <div className="space-y-2 text-sm">
                                         <div className="flex justify-between text-muted-foreground">
@@ -196,7 +196,7 @@ export default function CheckoutPage() {
                                         </div>
                                     </div>
 
-                                    <div className="w-full h-px bg-border my-2" />
+                                    <div className="w-full h-px bg-background dark:bg-black my-2" />
 
                                     <div className="flex justify-between items-center text-xl font-bold">
                                         <span>Total</span>
