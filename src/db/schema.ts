@@ -21,6 +21,7 @@ export const users = pgTable('users', {
     fullName: text('full_name'),
     phone: text('phone'),
     address: text('address'),
+    pgName: text('pg_name'),
     role: text('role').default('customer'),
     createdAt: timestamp('created_at').defaultNow(),
     updatedAt: timestamp('updated_at').defaultNow(),

@@ -11,6 +11,7 @@ export async function syncUser(payload: {
     fullName?: string;
     phone?: string;
     address?: string;
+    pgName?: string;
 }) {
     try {
         // Check if user exists
@@ -26,8 +27,6 @@ export async function syncUser(payload: {
                 .set({
                     email: payload.email,
                     fullName: payload.fullName || existingUser.fullName,
-                    phone: payload.phone || existingUser.phone,
-                    address: payload.address || existingUser.address,
                     updatedAt: new Date(),
                 })
                 .where(eq(users.clerkId, payload.clerkId))
@@ -43,12 +42,41 @@ export async function syncUser(payload: {
                     fullName: payload.fullName,
                     phone: payload.phone,
                     address: payload.address,
+                    pgName: payload.pgName,
                 })
                 .returning();
             return { data: newUser, error: null };
         }
     } catch (error: any) {
         console.error("Error syncing user:", error);
+        return { data: null, error: error.message };
+    }
+}
+
+export async function updateProfile(payload: {
+    clerkId: string;
+    fullName: string;
+    phone: string;
+    pgName: string;
+    address?: string;
+}) {
+    try {
+        const [updatedUser] = await db
+            .update(users)
+            .set({
+                fullName: payload.fullName,
+                phone: payload.phone,
+                pgName: payload.pgName,
+                address: payload.address,
+                updatedAt: new Date(),
+            })
+            .where(eq(users.clerkId, payload.clerkId))
+            .returning();
+
+        revalidatePath("/account");
+        return { data: updatedUser, error: null };
+    } catch (error: any) {
+        console.error("Error updating profile:", error);
         return { data: null, error: error.message };
     }
 }

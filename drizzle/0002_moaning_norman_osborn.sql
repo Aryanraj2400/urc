@@ -1,0 +1,1 @@
+ALTER TABLE "users" ADD COLUMN "pg_name" text;

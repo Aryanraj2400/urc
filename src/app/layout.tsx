@@ -5,6 +5,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { MiniCart } from "@/components/cart/mini-cart";
 import { ThemeProvider } from "@/components/theme-provider";
+import UserSync from "@/components/auth/user-sync";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
           >
             <Navbar />
             <MiniCart />
+            <UserSync />
             {children}
           </ThemeProvider>
         </body>

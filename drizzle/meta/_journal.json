@@ -15,6 +15,13 @@
       "when": 1771029786864,
       "tag": "0001_robust_serpent_society",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1771031453894,
+      "tag": "0002_moaning_norman_osborn",
+      "breakpoints": true
     }
   ]
 }

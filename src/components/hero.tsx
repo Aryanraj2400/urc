@@ -40,17 +40,17 @@ export function Hero() {
                         </Link>
                     </div>
 
-                    <div className="flex items-center gap-8 text-sm text-muted-foreground">
+                    <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-muted-foreground mt-2">
                         <div className="flex items-center gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-secondary" />
+                            <CheckCircle2 className="w-4 h-4 text-neon-green dark:text-neon-blue" />
                             <span>Background Checked</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-secondary" />
+                            <CheckCircle2 className="w-4 h-4 text-neon-green dark:text-neon-blue" />
                             <span>Eco-friendly</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-secondary" />
+                            <CheckCircle2 className="w-4 h-4 text-neon-green dark:text-neon-blue" />
                             <span>Insured</span>
                         </div>
                     </div>
