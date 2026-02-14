@@ -4,9 +4,22 @@ import { Hero } from "@/components/hero";
 import { TrustSection } from "@/components/trust-section";
 import { ServiceCard } from "@/components/services/service-card";
 import { useServiceStore } from "@/store/service-store";
+import { getServices } from "@/lib/actions/services";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const { services } = useServiceStore();
+  const { services, setServices } = useServiceStore();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      const { data } = await getServices();
+      if (data) setServices(data as any);
+      setIsLoading(false);
+    };
+    fetchServices();
+  }, [setServices]);
+
   const data = services.slice(0, 6);
 
   return (

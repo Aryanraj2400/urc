@@ -6,14 +6,24 @@ import { ServiceCard } from "@/components/services/service-card";
 import { Loader2 } from "lucide-react";
 
 import { useServiceStore } from "@/store/service-store";
+import { getServices } from "@/lib/actions/services";
 
 export default function ServicesPage() {
-    const { services } = useServiceStore();
-    const [isLoading, setIsLoading] = useState(false);
+    const { services, setServices } = useServiceStore();
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // No fetch needed, using local data
-    }, []);
+        const fetchServices = async () => {
+            setIsLoading(true);
+            const { data, error } = await getServices();
+            if (data) {
+                setServices(data as any);
+            }
+            setIsLoading(false);
+        };
+
+        fetchServices();
+    }, [setServices]);
 
     return (
         <main className="min-h-screen pt-36 pb-12">

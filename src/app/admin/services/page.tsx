@@ -11,9 +11,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 
 import { useServiceStore } from "@/store/service-store";
+import { createService, getServices, deleteService } from "@/lib/actions/services";
 
 export default function AdminServices() {
-    const { services, addService, removeService } = useServiceStore();
+    const { services, setServices } = useServiceStore();
     const [isLoading, setIsLoading] = useState(false);
     const [isSaving, setIsSaving] = useState(false);
     const [isFormOpen, setIsFormOpen] = useState(false);
@@ -28,38 +29,59 @@ export default function AdminServices() {
         image: "",
     });
 
+    useEffect(() => {
+        const fetchServices = async () => {
+            setIsLoading(true);
+            const { data } = await getServices();
+            if (data) setServices(data as any);
+            setIsLoading(false);
+        };
+        fetchServices();
+    }, [setServices]);
+
     const handleSave = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSaving(true);
 
-        const newService = {
-            id: Math.random().toString(36).substr(2, 9),
+        const payload = {
             name: formData.name,
             price: Number(formData.price),
             originalPrice: formData.originalPrice ? Number(formData.originalPrice) : null,
             duration: Number(formData.duration),
             description: formData.description,
-            inclusions: formData.inclusions.split("\n").filter(i => i.trim()),
             image: formData.image || null,
         };
 
-        addService(newService);
+        const { data, error } = await createService(payload);
+
+        if (data) {
+            const { data: updatedServices } = await getServices();
+            if (updatedServices) setServices(updatedServices as any);
+            setIsFormOpen(false);
+            setFormData({
+                name: "",
+                price: "",
+                originalPrice: "",
+                duration: "",
+                description: "",
+                inclusions: "",
+                image: "",
+            });
+        } else {
+            alert("Error creating service: " + error);
+        }
         setIsSaving(false);
-        setIsFormOpen(false);
-        setFormData({
-            name: "",
-            price: "",
-            originalPrice: "",
-            duration: "",
-            description: "",
-            inclusions: "",
-            image: "",
-        });
     };
 
-    const handleDelete = (id: string) => {
+    const handleDelete = async (id: number) => {
         if (confirm("Are you sure you want to delete this service?")) {
-            removeService(id);
+            const { error } = await deleteService(id);
+            if (!error) {
+                const { data } = await getServices();
+                if (data) setServices(data as any);
+            } else {
+                console.error("Error deleting service:", error);
+            }
         }
     };
 
@@ -245,7 +267,7 @@ export default function AdminServices() {
                                                     size="icon"
                                                     variant="ghost"
                                                     className="h-8 w-8 text-destructive hover:text-destructive/80 hover:bg-destructive/10"
-                                                    onClick={() => handleDelete(service.id)}
+                                                    onClick={() => handleDelete(Number(service.id))}
                                                 >
                                                     <Trash2 className="w-4 h-4" />
                                                 </Button>
