@@ -38,8 +38,8 @@ export function Navbar() {
                         {mounted ? (
                             <div className="relative h-14 w-32">
                                 <img
-                                    src="/images/logo-v3.png"
-                                    alt="Spotless Logo"
+                                    src="/images/urc-logo.png"
+                                    alt="urbanroomcare Logo"
                                     className="h-full w-auto object-contain"
                                 />
                             </div>

@@ -14,7 +14,7 @@ export default function ContactPage() {
                     className="text-center mb-16"
                 >
                     <h1 className="text-4xl md:text-5xl font-bold font-heading mb-4">Get in Touch</h1>
-                    <p className="text-muted-foreground">We are here to help you achieve a spotless home.</p>
+                    <p className="text-muted-foreground">We are here to help you achieve a urbanroomcare home.</p>
                 </motion.div>
 
                 <div className="max-w-xl mx-auto">
@@ -42,7 +42,7 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold font-heading text-lg">Email</h3>
-                                    <p className="text-muted-foreground">support@spotless.com</p>
+                                    <p className="text-muted-foreground">support@urbanroomcare.com</p>
                                 </div>
                             </div>
 

@@ -22,7 +22,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 <div className="p-6">
                     <Link href="/" className="flex items-center gap-2 mb-8">
                         <Home className="w-5 h-5" />
-                        <span className="font-bold text-xl uppercase tracking-tighter">Spotless Admin</span>
+                        <span className="font-bold text-xl uppercase tracking-tighter">urbanroomcare Admin</span>
                     </Link>
 
                     <nav className="space-y-1">

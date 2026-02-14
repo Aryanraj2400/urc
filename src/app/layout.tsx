@@ -18,7 +18,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Spotless | Premium Room Cleaning",
+  title: "urbanroomcare | Premium Room Cleaning",
   description: "Book professional room cleaning in seconds.",
 };
 
