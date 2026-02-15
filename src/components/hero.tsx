@@ -64,7 +64,7 @@ export function Hero() {
             </div>
 
             {/* Right Content - Asymmetric Collage */}
-            <div className="w-full md:w-[40%] h-[50vh] md:h-[calc(100vh-6rem)] relative bg-white md:block hidden mt-24 border-l border-neon-green/10 dark:border-neon-blue/10 transition-colors duration-300">
+            <div className="w-full md:w-[40%] h-[50vh] md:h-[calc(100vh-6rem)] relative bg-black md:block hidden mt-24 border-l border-neon-green/10 dark:border-neon-blue/10 transition-colors duration-300">
                 {/* Background decorative elements */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full bg-neon-green/10 dark:bg-neon-blue/10 blur-[100px] transition-colors duration-300" />
 
