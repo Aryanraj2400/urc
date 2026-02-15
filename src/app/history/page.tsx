@@ -102,7 +102,7 @@ export default function HistoryPage() {
                         <h2 className="text-xl font-medium mb-2">No orders yet</h2>
                         <p className="text-muted-foreground mb-6">Your booking history will show up here.</p>
                         <Link href="/services">
-                            <Button className="rounded-full">Browse Services</Button>
+                            <Button className="rounded-full h-12 px-8 text-base shadow-xl shadow-neon-green/20 dark:shadow-neon-blue/20 bg-neon-green dark:bg-neon-blue text-black dark:text-black hover:bg-neon-green/90 dark:hover:bg-neon-blue/90 border-none font-bold transition-all duration-300">Browse Services</Button>
                         </Link>
                     </motion.div>
                 ) : (

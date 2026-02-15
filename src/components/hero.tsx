@@ -34,7 +34,7 @@ export function Hero() {
                             Book Now <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
                         <Link href="/services" className="w-full sm:w-auto">
-                            <Button variant="outline" size="lg" className="w-full h-12 text-base hover:bg-transparent hover:scale-105 transition-transform">
+                            <Button size="lg" className="w-full sm:w-auto text-base h-12 shadow-xl shadow-neon-green/20 dark:shadow-neon-blue/20 bg-neon-green dark:bg-neon-blue text-black dark:text-black hover:bg-neon-green/90 dark:hover:bg-neon-blue/90 border-none font-bold transition-all duration-300">
                                 View Services
                             </Button>
                         </Link>
@@ -58,7 +58,7 @@ export function Hero() {
             </div>
 
             {/* Right Content - Asymmetric Collage */}
-            <div className="w-full md:w-[40%] h-[50vh] md:h-[calc(100vh-6rem)] relative bg-background dark:bg-black md:block hidden mt-24 border-l border-neon-green/10 dark:border-neon-blue/10 transition-colors duration-300">
+            <div className="w-full md:w-[40%] h-[50vh] md:h-[calc(100vh-6rem)] relative bg-white dark:bg-black md:block hidden mt-24 border-l border-neon-green/10 dark:border-neon-blue/10 transition-colors duration-300">
                 {/* Background decorative elements */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full bg-neon-green/10 dark:bg-neon-blue/10 blur-[100px] transition-colors duration-300" />
 

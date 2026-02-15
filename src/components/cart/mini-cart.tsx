@@ -169,7 +169,7 @@ export function MiniCart() {
                             </div>
 
                             <Button
-                                className="w-full h-12 text-base rounded-xl"
+                                className="w-full h-12 text-base rounded-xl shadow-xl shadow-neon-green/20 dark:shadow-neon-blue/20 bg-neon-green dark:bg-neon-blue text-black dark:text-black hover:bg-neon-green/90 dark:hover:bg-neon-blue/90 border-none font-bold transition-all duration-300"
                                 onClick={() => {
                                     if (!isSignedIn) {
                                         openSignIn();

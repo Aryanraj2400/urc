@@ -207,7 +207,7 @@ export default function AccountPage() {
                                     <Button
                                         type="submit"
                                         disabled={isSaving}
-                                        className="rounded-full px-8 shadow-lg shadow-primary/20 gap-2"
+                                        className="h-12 px-8 text-base rounded-full shadow-xl shadow-neon-green/20 dark:shadow-neon-blue/20 bg-neon-green dark:bg-neon-blue text-black dark:text-black hover:bg-neon-green/90 dark:hover:bg-neon-blue/90 border-none font-bold transition-all duration-300 gap-2"
                                     >
                                         {isSaving ? (
                                             <Loader2 className="w-4 h-4 animate-spin" />
