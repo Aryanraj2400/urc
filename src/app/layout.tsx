@@ -40,7 +40,6 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navbar />
-            <MiniCart />
             <UserSync />
             {children}
           </ThemeProvider>
