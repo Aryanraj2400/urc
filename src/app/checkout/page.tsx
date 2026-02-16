@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useCartStore } from "@/store/cart-store";
 import { useUser } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,7 +13,12 @@ import { motion } from "framer-motion";
 
 export default function CheckoutPage() {
     const router = useRouter();
-    const { items, getCartTotal, getDiscountAmount, getFinalTotal, coupon, clearCart } = useCartStore();
+    const items: any[] = [];
+    const getCartTotal = () => 0;
+    const getDiscountAmount = () => 0;
+    const getFinalTotal = () => 0;
+    const coupon: any = null;
+    const clearCart = () => { };
     const { user } = useUser();
 
     const [isLoading, setIsLoading] = useState(false);

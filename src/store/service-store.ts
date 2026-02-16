@@ -1,6 +1,17 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { ServiceItem } from "./cart-store";
+
+export interface ServiceItem {
+    id: string;
+    name: string;
+    description: string;
+    price: number;
+    originalPrice?: number;
+    duration: string;
+    image?: string;
+    category: string;
+    inclusions: string[];
+}
 
 interface ServiceStore {
     services: ServiceItem[];
