@@ -30,7 +30,7 @@ export function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                        <Link href="https://form.jotform.com/260456518863061" target="_blank" className="w-full sm:w-auto">
+                        <Link href="https://forms.gle/osV62QqgBoLMSVFB7" target="_blank" className="w-full sm:w-auto">
                             <Button size="lg" className="w-full sm:w-auto text-base h-12 shadow-xl shadow-neon-green/20 dark:shadow-neon-blue/20 bg-neon-green dark:bg-neon-blue text-black dark:text-black hover:bg-neon-green/90 dark:hover:bg-neon-blue/90 border-none font-bold transition-all duration-300">
                                 Book Now <ArrowRight className="ml-2 w-4 h-4" />
                             </Button>
